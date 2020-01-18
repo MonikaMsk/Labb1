@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIImageView *DetailedImageView;
 @property (weak, nonatomic) IBOutlet UILabel *ContLabel;
 @property (weak, nonatomic) IBOutlet UIButton *Button;
+@property (weak, nonatomic) IBOutlet UILabel *TextLabel;
 
 
 @end

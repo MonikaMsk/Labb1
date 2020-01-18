@@ -112,10 +112,24 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="230"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rf-8J-zPp">
-                                <rect key="frame" x="20" y="409" width="374" height="113"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTP-vR-y1D">
+                                <rect key="frame" x="20" y="354" width="374" height="158"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Press the button below to see your travel destinations as well as to add your new ones">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rf-8J-zPp">
+                                <rect key="frame" x="20" y="520" width="374" height="113"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add your travel destinations"/>
                                 <connections>
                                     <segue destination="hQF-Wk-YWr" kind="show" identifier="GoToList" id="LL7-UO-OHl"/>
                                 </connections>
@@ -128,6 +142,7 @@
                     <connections>
                         <outlet property="Button" destination="0rf-8J-zPp" id="5vL-44-VvS"/>
                         <outlet property="DetailedImageView" destination="Po0-cE-n3R" id="yNZ-WV-ZNE"/>
+                        <outlet property="TextLabel" destination="yTP-vR-y1D" id="u3F-Un-7Si"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uTH-J2-b9a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -18,6 +18,17 @@
 @implementation ListTableViewController
 
 
+-(NSManagedObjectContext *)managedObjectContect {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication]delegate];
+    if([delegate respondsToSelector:@selector(managedObjectContext)]){
+        context = [delegate managedObjectContext];
+        
+    }
+    return context;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -26,6 +37,16 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+    
+}
+
+
+-(void) viewWillAppear:(BOOL)animated{
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContect];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Entity"];
+    
+    self.devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
     
 }
 
