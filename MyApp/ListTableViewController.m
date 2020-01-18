@@ -48,6 +48,9 @@
     
     self.devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
     
+    
+    [self.tableView reloadData];
+    
 }
 
 #pragma mark - Table view data source
@@ -60,15 +63,16 @@
     return self.devices.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    NSManagedObjectModel *app = [self.devices objectAtIndex:indexPath.row];
+    [cell.textLabel setText: [NSString stringWithFormat:@"%@ %@ %@", [app valueForKey:@"entity1"], [app valueForKey:@"entity2"], [app valueForKey:@"entity3"] ]];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

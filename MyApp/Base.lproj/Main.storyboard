@@ -200,10 +200,10 @@
             </objects>
             <point key="canvasLocation" x="3195.6521739130435" y="112.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Data View Controller-->
         <scene sceneID="2SI-lP-5qv">
             <objects>
-                <viewController id="ZL7-zn-UMW" sceneMemberID="viewController">
+                <viewController id="ZL7-zn-UMW" customClass="DataViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fEU-Gs-bOr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -215,12 +215,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yAJ-Xx-x8H">
-                                <rect key="frame" x="20" y="174" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cpf-pa-VgA">
                                 <rect key="frame" x="20" y="216" width="374" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -251,12 +245,29 @@
                                 <rect key="frame" x="20" y="455" width="374" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="SaveDataButton:" destination="ZL7-zn-UMW" eventType="touchUpInside" id="980-Jn-CWo"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yAJ-Xx-x8H">
+                                <rect key="frame" x="20" y="160" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="RemoveTheKeyboard:" destination="ZL7-zn-UMW" eventType="editingDidEnd" id="ari-Tj-TM0"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ITu-zC-xf2"/>
                     </view>
                     <navigationItem key="navigationItem" id="Spo-G7-sdC"/>
+                    <connections>
+                        <outlet property="CountryText" destination="yAJ-Xx-x8H" id="D5Y-d3-XX7"/>
+                        <outlet property="LocationText" destination="ltp-1T-ZBf" id="ROA-Vu-S60"/>
+                        <outlet property="PlaceToSeeText" destination="i32-ff-Wv1" id="SLr-ZN-Ilw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cSJ-i7-DfJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

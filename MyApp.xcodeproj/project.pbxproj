@@ -30,6 +30,7 @@
 		7FFF676023D139A7004C6D3C /* travel2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7FFF675F23D139A7004C6D3C /* travel2.jpg */; };
 		7FFF676323D33FFE004C6D3C /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF676223D33FFE004C6D3C /* ListTableViewController.m */; };
 		7FFF676623D341E3004C6D3C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFF676523D341E3004C6D3C /* CoreData.framework */; };
+		7FFF676923D363B2004C6D3C /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF676823D363B2004C6D3C /* DataViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,8 @@
 		7FFF676123D33FFE004C6D3C /* ListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
 		7FFF676223D33FFE004C6D3C /* ListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
 		7FFF676523D341E3004C6D3C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7FFF676723D363B2004C6D3C /* DataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
+		7FFF676823D363B2004C6D3C /* DataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,8 @@
 				7FFF674D23D11616004C6D3C /* CountriesViewControllViewController.m */,
 				7FFF676123D33FFE004C6D3C /* ListTableViewController.h */,
 				7FFF676223D33FFE004C6D3C /* ListTableViewController.m */,
+				7FFF676723D363B2004C6D3C /* DataViewController.h */,
+				7FFF676823D363B2004C6D3C /* DataViewController.m */,
 				7FFF670D23D10D78004C6D3C /* Main.storyboard */,
 				7FFF671323D10D7A004C6D3C /* Assets.xcassets */,
 				7FFF675F23D139A7004C6D3C /* travel2.jpg */,
@@ -338,6 +343,7 @@
 				7FFF673E23D10F83004C6D3C /* TableTableViewController.m in Sources */,
 				7FFF671A23D10D7A004C6D3C /* main.m in Sources */,
 				7FFF674E23D11616004C6D3C /* CountriesViewControllViewController.m in Sources */,
+				7FFF676923D363B2004C6D3C /* DataViewController.m in Sources */,
 				7FFF670C23D10D78004C6D3C /* ViewController.m in Sources */,
 				7FFF671223D10D78004C6D3C /* MyApp.xcdatamodeld in Sources */,
 				7FFF670623D10D78004C6D3C /* AppDelegate.m in Sources */,
