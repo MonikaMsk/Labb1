@@ -246,7 +246,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
-                                    <action selector="SaveDataButton:" destination="ZL7-zn-UMW" eventType="touchUpInside" id="980-Jn-CWo"/>
+                                    <action selector="SaveButton:" destination="ZL7-zn-UMW" eventType="touchUpInside" id="9Xh-CZ-MgR"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yAJ-Xx-x8H">
@@ -254,9 +254,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="RemoveTheKeyboard:" destination="ZL7-zn-UMW" eventType="editingDidEnd" id="ari-Tj-TM0"/>
-                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -264,9 +261,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Spo-G7-sdC"/>
                     <connections>
-                        <outlet property="CountryText" destination="yAJ-Xx-x8H" id="D5Y-d3-XX7"/>
-                        <outlet property="LocationText" destination="ltp-1T-ZBf" id="ROA-Vu-S60"/>
-                        <outlet property="PlaceToSeeText" destination="i32-ff-Wv1" id="SLr-ZN-Ilw"/>
+                        <outlet property="Country" destination="yAJ-Xx-x8H" id="Q8N-di-pea"/>
+                        <outlet property="Location" destination="ltp-1T-ZBf" id="tmZ-g8-2bW"/>
+                        <outlet property="PlaceToSee" destination="i32-ff-Wv1" id="k3Y-ph-JpS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cSJ-i7-DfJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

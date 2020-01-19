@@ -18,7 +18,7 @@
 @implementation ListTableViewController
 
 
--(NSManagedObjectContext *)managedObjectContect {
+-(NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
     id delegate = [[UIApplication sharedApplication]delegate];
     if([delegate respondsToSelector:@selector(managedObjectContext)]){
@@ -43,7 +43,7 @@
 
 
 -(void) viewWillAppear:(BOOL)animated{
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContect];
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Entity"];
     
     self.devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
@@ -67,8 +67,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListCell" forIndexPath:indexPath];
     
-    NSManagedObjectModel *app = [self.devices objectAtIndex:indexPath.row];
-    [cell.textLabel setText: [NSString stringWithFormat:@"%@ %@ %@", [app valueForKey:@"entity1"], [app valueForKey:@"entity2"], [app valueForKey:@"entity3"] ]];
+    NSManagedObjectModel *newApp = [self.devices objectAtIndex:indexPath.row];
+    [cell.textLabel setText: [NSString stringWithFormat:@"%@ %@ %@", [newApp valueForKey:@"entry1"], [newApp valueForKey:@"entry2"], [newApp valueForKey:@"entry3"] ]];
     
     return cell;
 }

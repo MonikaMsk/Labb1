@@ -17,7 +17,7 @@
 
 @synthesize app;
 
--(NSManagedObjectContext *)managedObjectContect {
+-(NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
     id delegate = [[UIApplication sharedApplication]delegate];
     if([delegate respondsToSelector:@selector(managedObjectContext)]){
@@ -26,6 +26,7 @@
     }
     return context;
 }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,24 +43,24 @@
 }
 */
 
-- (IBAction)RemoveTheKeyboard:(id)sender {
-}
 
-- (IBAction)SaveDataButton:(id)sender {
+- (IBAction)SaveButton:(id)sender {
     
-    NSManagedObjectContext *context = [self managedObjectContect];
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
     NSManagedObject *newApp = [NSEntityDescription insertNewObjectForEntityForName:@"Entity" inManagedObjectContext:context];
     
-    [newApp setValue:self.CountryText.text forKey:@"entity1"];
-    [newApp setValue:self.LocationText.text forKey:@"entity2"];
-    [newApp setValue:self.PlaceToSeeText.text forKey:@"entity3"];
+    [newApp setValue:self.Country.text forKey:@"entry1"];
+    [newApp setValue:self.Location.text forKey:@"entry2"];
+    [newApp setValue:self.PlaceToSee.text forKey:@"entry3"];
     
+    NSError * error = nil;
     
-    NSError *error = nil;
-    
-    if(![context save:&error]) {
-        NSLog(@"%@ %@",error, [error localizedDescription]);
+    if(![context save:&error]){
+        NSLog(@"%@ %@", error, [error localizedDescription]);
     }
-   
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
 }
 @end

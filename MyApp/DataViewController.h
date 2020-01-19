@@ -11,14 +11,14 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DataViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *CountryText;
-@property (weak, nonatomic) IBOutlet UITextField *LocationText;
-@property (weak, nonatomic) IBOutlet UITextField *PlaceToSeeText;
+@property (weak, nonatomic) IBOutlet UITextField *Country;
+@property (weak, nonatomic) IBOutlet UITextField *Location;
+@property (weak, nonatomic) IBOutlet UITextField *PlaceToSee;
 
-@property (strong) NSManagedObjectModel *app;
+@property(strong) NSManagedObjectModel *app;
 
+- (IBAction)SaveButton:(id)sender;
 
-- (IBAction)SaveDataButton:(id)sender;
 
 @end
 
